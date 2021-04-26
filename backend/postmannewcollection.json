@@ -1,0 +1,883 @@
+{
+	"info": {
+		"_postman_id": "6d5e38a4-d3dd-4f73-83b8-fa8d0f837cb0",
+		"name": "WhatAppApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "create Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_name\":\"Admin1\",\n    \"password\":\"test1234\",\n    \"type\":\"Admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/admin/create",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all admin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/admin/all",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get Admin by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/admin/606b7140d8704069864d18fc",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"606b7140d8704069864d18fc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "admin signIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_name\":\"Admin1\",\n    \"password\":\"test112233\" \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/admin/signin",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Admin",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\":\"Active\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/admin/update/606b7140d8704069864d18fc",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"update",
+								"606b7140d8704069864d18fc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forget password admin",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"oldPassword\":\"test1234\",\n    \"newPassword\":\"test112233\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/admin/forget/606b7140d8704069864d18fc",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"forget",
+								"606b7140d8704069864d18fc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete Admin",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/admin/delete/606b7140d8704069864d18fc",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"delete",
+								"606b7140d8704069864d18fc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all reports",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/admin/all-reports",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"all-reports"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "accept report",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/admin/accept-report/606b6f2bd50beb67ffffa4a8",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"accept-report",
+								"606b6f2bd50beb67ffffa4a8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reject report",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/admin/reject-report/606b6f5dd50beb67ffffa4a9",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"reject-report",
+								"606b6f5dd50beb67ffffa4a9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_name\":\"test_user\",\n    \"email\":\"test123@mailinator.com\",\n    \"password\":\"test1122\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/users/signup",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sign In",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"email\":\"test123@mailinator.com\",\n    \"password\":\"test112233\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/users/signIn",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"signIn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateUser",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"status\":\"Active\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/users/update/605ce3db413ed2000417bc55",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"update",
+						"605ce3db413ed2000417bc55"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "forget",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"oldPassword\":\"test1122\",\n    \"newPassword\":\"test112233\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/users/forget/6050f5c6328b820004328473",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"forget",
+						"6050f5c6328b820004328473"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"test@mailinator.com\",\n    \"password\":\"test112233\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/users/6050f5c6328b820004328473",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"6050f5c6328b820004328473"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/users/all",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get one by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/users/6050f08bd55fd52572546d9e",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"6050f08bd55fd52572546d9e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get one by email",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/users/email/test@mailinator.com",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"email",
+						"test@mailinator.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create group",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \n    \"owner\":\"6050f5c6328b820004328473\",\n    \"members\":[\"6050f5c6328b820004328473\",\"6051097e9871f90004f8ccd6\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/group/",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"group",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find group by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/group/6065ee1ebcfc6f0004a83046",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"group",
+						"6065ee1ebcfc6f0004a83046"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all groups",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/group/all",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"group",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add participant to group",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"member\":[\n                \"605ce3db413ed2000417bc55\",\n                \"6065ed84bcfc6f0004a83043\"\n            ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/group/add/6065ee1ebcfc6f0004a83046",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"group",
+						"add",
+						"6065ee1ebcfc6f0004a83046"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remove participant ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"member\":[\n                \"605ce3db413ed2000417bc55\"\n                \n            ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/group/remove/6065ee1ebcfc6f0004a83046",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"group",
+						"remove",
+						"6065ee1ebcfc6f0004a83046"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "owner exit",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"owner\":\"6050f5c6328b820004328473\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/group/6053bdc00ccbf4238459b86e",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"group",
+						"6053bdc00ccbf4238459b86e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update group data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Test Group\",\n    \"about\":\"It join for fun\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/group/update/6053bed167f0810004acbe73",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"group",
+						"update",
+						"6053bed167f0810004acbe73"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create frindrequest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"sender\":\"6050f08bd55fd52572546d9e\",\n    \"receiver\":\"6051097e9871f90004f8ccd6\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/users/create-request",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"create-request"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "accept request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\":\"605ce3db413ed2000417bc55\",\n    \"requestId\":\"605ce56e413ed2000417bc57\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/users/accept-request",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"accept-request"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reject request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\":\"6051097e9871f90004f8ccd6\",\n    \"requestId\":\"605ba191677ef70004174080\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/users/reject-request",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"reject-request"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get friends requests",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/users/friend-requests/605cc86cddda4c000471db84",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"friend-requests",
+						"605cc86cddda4c000471db84"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "unfriend",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\":\"605ce3db413ed2000417bc55\",\n    \"friendId\":\"605ce3e9413ed2000417bc56\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/users/remove-friend",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"remove-friend"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find chat",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\":\"605ce3db413ed2000417bc55\",\n    \"friendId\":\"605ce3e9413ed2000417bc56\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/users/find-chat",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"find-chat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get group by userid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/group/mygroups/605ce3db413ed2000417bc55",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"group",
+						"mygroups",
+						"605ce3db413ed2000417bc55"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all reported",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/users/all-reported",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"all-reported"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create Report",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"reportedBy\":\"605ce3e9413ed2000417bc56\",\n    \"reportedUser\":\"605ce3db413ed2000417bc55\",\n    \"issue\":\"Blaiming wrong\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/users/report-user",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"report-user"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://localhost:4000"
+		},
+		{
+			"key": "DUMP",
+			"value": "https://whatsapp137.herokuapp.com"
+		}
+	]
+}
